@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnEnviar;
     RadioButton radioHombre;
     RadioButton radioMujer;
+    Spinner spinIdioma;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         btnEnviar = (Button)findViewById(R.id.btnEnviar);
         radioHombre = (RadioButton)findViewById(R.id.radioHombre);
         radioMujer = (RadioButton)findViewById(R.id.radioMujer);
+        spinIdioma = (Spinner)findViewById(R.id.spinIdioma);
 
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
                     Log.e("Genero", "Femenino");
                 }
 
+                Log.e("Idioma",spinIdioma.getSelectedItem().toString());
             }
         });
-
     }
 }
